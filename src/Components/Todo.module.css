@@ -1,0 +1,86 @@
+.todo_item {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gray-500);
+    border-radius: 8px;
+    border: solid 1px var(--gray-400);
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    align-items: start;
+}
+
+.todo_item.completed {
+    border: solid 1px var(--gray-600);
+    opacity: 0.6;
+}
+
+.todo_item p {
+    flex: 1;
+    color: var(--white);
+    font-size: 0.875rem;
+    margin-left: 12px;
+}
+
+.todo_item button {
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    color: var(--gray-300);
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.todo_item button:hover{
+    color: var(--red-300);
+    background-color: var(--gray-400);
+}
+
+.todo_item input[type="checkbox"] {
+    display: none;
+}
+
+.todo_item input[type="checkbox"] + span {
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    width: 18px;
+    height: 18px;
+    margin: -1px 0px 0 0;
+    vertical-align: middle;
+    background: transparent;
+    border: 2px solid var(--blue-300);
+    cursor: pointer;
+}
+
+
+.todo_item input[type="checkbox"]:checked + span {
+    position: relative;
+    background: var(--purple-600) -19px top no-repeat;
+    border: 2px solid var(--purple-600);
+}
+
+.todo_item input[type="checkbox"]:checked:hover + span {
+    background: var(--purple-300) -19px top no-repeat;
+    border: 2px solid var(--purple-300);
+}
+
+.todo_item input[type="checkbox"]:not(:checked):hover + span {
+    background-color: var(--blue-600);
+}
+
+.todo_item input[type="checkbox"]:checked + span::before {
+    content: "\2713";
+    position: absolute;
+    top: -3px;
+    color: var(--white);
+}
+
+.todo_item input[type="checkbox"] + span {
+    margin-right: 4px;
+}
+
+.complete {
+    text-decoration: line-through;
+}

@@ -1,0 +1,94 @@
+.form_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: calc(0px - 1.5rem - 6px);
+}
+
+.form_wrapper form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.form_wrapper form input {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--gray-700);
+    background-color: var(--gray-500);
+    color: var(--white);
+}
+
+.form_wrapper form input:valid,
+.form_wrapper form input:focus{
+    border-color: var(--purple-300);
+}
+
+
+.form_wrapper form button[type="submit"] {
+    border-radius: 8px;
+    padding: 1rem;
+    border: 0;
+    color: var(--white);
+    background-color: var(--blue-600);
+    font-size: 0.875rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.form_wrapper form button[type="submit"]:disabled{
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.form_wrapper form button[type="submit"]:disabled:hover{
+    background-color: var(--blue-600);
+}
+
+.form_wrapper form button[type="submit"]:hover {
+    background-color: var(--blue-300);
+}
+
+.form_wrapper form button[type="submit"] svg {
+    margin: 0 4px;
+}
+
+.content_wrapper {
+    margin-top: 4rem;
+}
+
+.content_wrapper header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.content_wrapper header strong {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: var(--blue-300);
+}
+
+.content_wrapper header strong.concluida {
+    color: var(--purple-300);
+}
+
+.content_wrapper header strong span {
+    color: var(--white);
+    margin: 0 0.45rem;
+    background-color: var(--gray-300);
+    padding: 2px 8px 2px 8px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
